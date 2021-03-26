@@ -34,17 +34,17 @@
         #header .container li:hover {background: #1979b5;}
         #header .container li:hover a {color:#fff;}
         #header .container li a {display:block; line-height:40px; text-align:center; font-weight:bold}
-        #section1st li {float:left; width:calc((1000px - 60px) / 4)}
+        
+        #section1st li {float:left; width:calc((1000px - 60px) / 4); width:235px; height:235px; position:relative; cursor:pointer; overflow:hidden;
+                        border-radius:0 10% 0 10%;}
         #section1st li + li {margin-left:20px;}
         #section1st h2, #section1st p {text-align:center}
         #section1st h2:after {content:''; display:block; width:100px; height:1px; background:#000; margin:10px auto;}
         #section1st p {margin-bottom:20px;}
-        #section2nd li {float:left; width:calc((1000px - 60px) / 4)}
-        #section2nd li + li {margin-left:20px;}
-        #section2nd h2, #section2nd p {text-align:center}
-        #section2nd h2:after {content:''; display:block; width:100px; height:1px; background:#000; margin:10px auto;}
-        #section2nd p {margin-bottom:20px;}
-        
+        #section1st .overlay {background:rgba(83, 107, 209, 0.79); height:100%; width:100%; position:absolute; transition:0.3s; 
+                              display:flex; justify-content: center; align-items:center; text-align:center; top:-100%; left:0}
+        #section1st li:hover .overlay {top:0; left:0}
+
         .bx-wrapper {
             -moz-box-shadow: none;
             -webkit-box-shadow: none;
@@ -100,43 +100,22 @@
             <ul class="clearfix">
                 <li>
                     <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">TOP<br>TEST</div>
                 </li>
-                
                 <li>
                     <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">TOP</div>
                 </li>
-                
                 <li>
                     <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">TOP</div>
                 </li>
-                
                 <li>
                     <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">TOP</div>
                 </li>
             </ul>
         </section>
     </div>
-    
-    <section class="container" id="section2nd">
-        <h2>GALLERY1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quia!</p>
-        <ul class="clearfix">
-            <li>
-                <img src="../images/testimg.jpg" alt="">
-            </li>
-            
-            <li>
-                <img src="../images/testimg.jpg" alt="">
-            </li>
-            
-            <li>
-                <img src="../images/testimg.jpg" alt="">
-            </li>
-            
-            <li>
-                <img src="../images/testimg.jpg" alt="">
-            </li>
-        </ul>
-    </section>
 </body>
 </html>
