@@ -6,14 +6,23 @@
     <script>
         var num = 1;
         var total = num + 10;
-        document.write(typeof 100 + "<br>");
-        document.write(typeof "100" + "<br>");
-        document.write("<p class='han'>" + typeof true + "</p>");
-        document.write(typeof num + "<br>");
-        document.write("전체합:" + total);
+        let st = "hello" + "javascript";
+        //st = st + "!!";
+        st += "!!";
+        //st = st + " 반갑습니다.";
+        st += " 반갑습니다."
+        document.write(st+"1");
+        alert(st+"2");
+        console.log(st+"3");
+        
     </script>
 </head>
 <body>
-   
+   <script>
+        let tag = "<div>test</div>"
+        tag += "<img src='../../images/testimg.jpg'>"
+       
+       document.write(tag);
+    </script>
 </body>
 </html>

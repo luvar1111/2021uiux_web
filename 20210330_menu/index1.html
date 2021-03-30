@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".slider").bxSlider();
+        });
+    </script>
+    <style>
+        .wrap {background:blue;}
+        .gnb {width: 1200px; margin: 0 auto; height: 40px;}
+        .gnb > ul > li {float: left; width: calc(1200px / 4); background: blue;}
+        .gnb > ul > li:hover {background:skyblue !important;}
+        .gnb > ul > li a {display: block; text-align: center; line-height: 40px;}
+        .gnb > ul > li:hover a {color:#fff}
+        .gnb > ul > li:hover .submenu {display: block !important; position: absolute !important; z-index:1}
+
+        .gnb .submenu {display: none;}
+        .gnb .submenu li:hover {background: lightblue;}
+        .gnb .submenu li a {display: block !important; line-height: 30px !important; text-align: center !important;}
+
+        .visual {width: 1200px; position: relative; margin: 0 auto; overflow: hidden;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="gnb">
+            <ul class="clearfix">
+                <li><a href="#">MENU1</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu1_1</a></li>
+                        <li><a href="#">smenu1_2</a></li>
+                        <li><a href="#">smenu1_3</a></li>
+                        <li><a href="#">smenu1_4</a></li>
+                        <li><a href="#">smenu1_5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU2</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu2_1</a></li>
+                        <li><a href="#">smenu2_2</a></li>
+                        <li><a href="#">smenu2_3</a></li>
+                        <li><a href="#">smenu2_4</a></li>
+                        <li><a href="#">smenu2-5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU3</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu3_1</a></li>
+                        <li><a href="#">smenu3_2</a></li>
+                        <li><a href="#">smenu3_3</a></li>
+                        <li><a href="#">smenu3_4</a></li>
+                        <li><a href="#">smenu3_5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU4</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu4_1</a></li>
+                        <li><a href="#">smenu4_2</a></li>
+                        <li><a href="#">smenu4_3</a></li>
+                        <li><a href="#">smenu4_4</a></li>
+                        <li><a href="#">smenu4_5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="visual">
+      <ul class="slider">
+        <li><img src="../images/pc01.jpg" alt=""></li>
+        <li><img src="../images/pc02.jpg" alt=""></li>
+        <li><img src="../images/pc03.jpg" alt=""></li>
+      </ul>
+    </div>
+</body>
+</html>
