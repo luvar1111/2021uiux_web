@@ -15,17 +15,17 @@
     <style>
         .wrap {background:blue;}
         .gnb {width: 1200px; margin: 0 auto; height: 40px;}
-        .gnb > ul > li {float: left; width: calc(1200px / 4); background: blue;}
-        .gnb > ul > li:hover {background:skyblue !important;}
+        .gnb > ul > li {position: relative; float: left; width: calc(1200px / 4); background: blue;}
+        .gnb > ul > li:hover {background:skyblue;}
         .gnb > ul > li a {display: block; text-align: center; line-height: 40px;}
         .gnb > ul > li:hover a {color:#fff}
-        .gnb > ul > li:hover .submenu {display: block !important; position: absolute !important; z-index:1}
+        .gnb > ul > li:hover .submenu {display: block;}
 
-        .gnb .submenu {display: none;}
+        .gnb .submenu {display: none; position: absolute; width:calc(1200px / 4); background:skyblue; z-index:1}
         .gnb .submenu li:hover {background: lightblue;}
-        .gnb .submenu li a {display: block !important; line-height: 30px !important; text-align: center !important;}
+        .gnb .submenu li a {display: block; line-height: 30px; text-align: center;}
 
-        .visual {width: 1200px; position: relative; margin: 0 auto; overflow: hidden;}
+        .visual {width: 1200px;  margin: 0 auto; overflow: hidden;}
     </style>
 </head>
 <body>

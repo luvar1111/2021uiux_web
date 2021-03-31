@@ -4,25 +4,41 @@
     <meta charset="UTF-8">
     <title>script</title>
     <script>
-        var num = 1;
-        var total = num + 10;
-        let st = "hello" + "javascript";
-        //st = st + "!!";
-        st += "!!";
-        //st = st + " 반갑습니다.";
-        st += " 반갑습니다."
-        document.write(st+"1");
-        alert(st+"2");
-        console.log(st+"3");
-        
+        let x=5;
+        let y=7;
+        let result;
+        result = ( x > y )? x : y ;
+        document.write("큰값 : " + result + "<br>");
+        result = ( x > y )? x-y : y-x;
+        document.write("차이값 : " + result + "<br>");
+
+
+        //x = x + 1;
+        x += 1;
+        console.log("x값 : " + x);
+
+        const gender = "M";
+        const age = 21;
+        let result1;
+        if(gender == "M"){
+          console.log("남자");
+          if(age >= 19){
+            result1 = "남자/성인";
+          }else{
+            result1 = "남자/미성년";
+          }
+        }else{
+          console.log("여자");
+          if(age >= 19){
+            result1 = "여자/성인";
+          }else{
+            result1 = "여자.미성년";
+          }
+        }
+        document.write("당신은 " + result1 + "입니다.");
     </script>
 </head>
 <body>
-   <script>
-        let tag = "<div>test</div>"
-        tag += "<img src='../../images/testimg.jpg'>"
-       
-       document.write(tag);
-    </script>
+
 </body>
 </html>
