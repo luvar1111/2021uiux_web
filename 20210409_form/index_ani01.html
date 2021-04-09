@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {width: 100px; height: 100px; background: #f00;
+          animation-name:ani;
+          animation-duration:1s;
+          animation-fill-mode:forwards;
+          animation-iteration-count:infinite;
+          animation-direction:alternate;
+          animation-delay:1s;
+          animation-timing-function:linear}
+    @keyframes ani {
+      from {width: 100px; background: #f00;}
+      to {width: 200px; background: #0f0;}
+    }
+
+    .boxWrap {width: 600px; height: 600px; background: #eee; position: relative; cursor:pointer}
+    .boxWrap:hover .box01{animation-name:box01}
+    .boxWrap:hover .box02{animation-name:box02}
+    .boxWrap:hover .box03{animation-name:box03}
+    .boxWrap:hover .box04{animation-name:box04}
+
+    .boxWrap .box01 {width: 0; height: 10px; background: #000;
+                     animation-duration:0.3s;
+                     animation-fill-mode:forwards}
+
+    .boxWrap .box02 {width: 10px; height: 0; background: #f00; position: absolute; right: 0; top: 0;
+                     animation-duration:0.3s;
+                     animation-fill-mode:forwards;
+                     animation-delay:0.3s}
+
+    .boxWrap .box03 {width: 0; height: 10px; background: #0f0; position: absolute; right: 0; bottom: 0;
+                     animation-duration:0.3s;
+                     animation-fill-mode:forwards;
+                     animation-delay:0.6s}
+
+    .boxWrap .box04 {width: 10px; height: 0; background: #00f; position: absolute; left: 0; bottom: 0;
+                     animation-duration:0.3s;
+                     animation-fill-mode:forwards;
+                     animation-delay:0.9s}
+
+    @keyframes box01 {
+      from {width: 0;}
+      to {width: 600px;}
+    }
+    @keyframes box02 {
+      from {height: 0;}
+      to {height: 600px;}
+    }
+    @keyframes box03 {
+      from {width: 0;}
+      to {width: 600px;}
+    }
+    @keyframes box04 {
+      from {height: 0;}
+      to {height: 600px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+  <div class="boxWrap">
+    <div class="box01"></div>
+    <div class="box02"></div>
+    <div class="box03"></div>
+    <div class="box04"></div>
+  </div>
+</body>
+</html>
