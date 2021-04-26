@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jquery</title>
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <style>
+    .gnb {width: 1000px; height: 30px; margin: 0 auto;}
+    .gnb li {float:left; width:200px; line-height:30px; text-align:center; transition:.3s; cursor:pointer}
+    .gnb li:hover {background: pink;}
+    .gnb li.active {background: skyblue;}
+    .boxWrap {width: 1000px; height: 50px; margin: auto; border: 1px solid #000;}
+    .boxWrap div {padding: 10px; display: none;}
+    .boxWrap div:nth-child(1) {display:block;}
+  </style>
+</head>
+<body>
+  <ul class="gnb clearfix">
+    <li class="active">menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+  </ul>
+  <div class="boxWrap">
+    <div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, nobis!</div>
+    <div class="box2">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, nemo?</div>
+    <div class="box3">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, doloribus.</div>
+    <div class="box4">4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, distinctio.</div>
+    <div class="box5">5. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, et.</div>
+  </div>
+
+  <script>
+    $(".gnb li").click(function(){
+      let t = $(this).index();
+
+      $(".gnb li").removeClass("active");
+      $(this).addClass("active");
+      $(".boxWrap div").hide().eq(t).fadeIn();
+    });
+  </script>
+</body>
+</html>

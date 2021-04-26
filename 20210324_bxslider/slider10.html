@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bxslider</title>
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <style>
+    img {display: block;}
+    .sliderWrap {width: 500px; height: 300px; margin: 0 auto;}
+    .slider1 {display: none;}
+    .sliderWrap .bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0 none;
+    background: #fff;
+    }
+    .sliderWrap .title {
+    position: absolute; bottom: 10px; left: 10px;
+    font-size: 2rem; color: #fff;
+  }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $(".slider").bxSlider({
+        pager:false
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="sliderWrap">
+    <ul class="slider">
+      <li>
+        <img src="images/img1.png" alt="">
+        <div class="title">test1</div>
+      </li>
+      <li>
+        <img src="images/img2.png" alt="">
+        <div class="title">test2</div>
+      </li>
+      <li>
+        <img src="images/img3.png" alt="">
+        <div class="title">test3</div>
+      </li>
+    </ul>
+  </div>
+  <div class="slider1">
+    <div><img src="images/img1.png" alt=""></div>
+    <div><img src="images/img2.png" alt=""></div>
+    <div><img src="images/img3.png" alt=""></div>
+  </div>
+</body>
+</html>

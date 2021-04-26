@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {height: 1000px;}
+    .boxWrap {position: fixed; right: 0;}
+    #box02 {background: skyblue;}
+  </style>
+</head>
+
+<body>
+  <div class="boxWrap">
+    <a href="#box01">box01로 이동</a>
+    <a href="#box02">box01로 이동</a>
+    <a href="#box03">box01로 이동</a>
+    <a href="#" onclick="mClick(event)">top</a>
+  </div>
+
+  <div class="box" id="box01">1</div>
+  <div class="box" id="box02">2</div>
+  <div class="box" id="box03">3</div>
+
+  <script>
+    function mClick(e){
+      e.preventDefault();
+    }
+  </script>
+</body>
+
+</html>

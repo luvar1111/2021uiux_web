@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>object</title>
+</head>
+<body>
+  <p id="var1">정보</p>
+  <p id="var2">정보1</p>
+  <p id="var3" class="view1">정보3</p>
+  <p id="var4" class="view1">정보4</p>
+  <script>
+    console.log(document.getElementById("var1").innerHTML);
+    console.log(document.getElementsByTagName("p")[0].innerHTML);
+    console.log(document.getElementsByTagName("body")[0].innerHTML);
+
+    document.getElementById("var1").innerHTML = "변경1";
+    document.getElementsByTagName("p")[1].innerHTML = "변경2";
+    document.getElementsByTagName("body")[0].style.backgroundColor = "skyblue";
+    document.getElementsByClassName("view1")[0].innerHTML = "변경3";
+    document.getElementsByClassName("view1")[1].innerHTML = "변경4";
+
+    document.querySelectorAll(".view1")[0].style.backgroundColor = "orange";
+    document.querySelectorAll(".view1")[1].style.backgroundColor = "orange";
+
+    function view(){
+      const view = document.querySelectorAll(".view1");
+
+      for(let i=0;i<view.length;i++){
+        view[i].style.border = "3px solid #f00";
+      }
+    }
+
+    function btn1(){
+      const btn1 = document.getElementsByTagName("body")[0].style.backgroundColor = "orange";
+    }
+
+    function btn2(){
+      const btn2 = document.getElementsByTagName("body")[0].style.backgroundColor = "yellow";
+    }
+
+    function btn(x){
+      const btn = document.getElementsByTagName("body");
+      if(x == 1){
+        //document.getElementsByTagName("body")[0].style.backgroundColor = "orange";
+        btn[0].style.backgroundColor = "orange";
+      }else{
+        //document.getElementsByTagName("body")[0].style.backgroundColor = "yellow";
+        btn[0].style.background = "url('../../images/testimg.jpg')no-repeat";
+      }
+    }
+
+    function btn3(x){
+      const btn3 = document.getElementsByTagName("body");
+      btn3[0].style.backgroundColor = x;
+    }
+
+  </script>
+  <button onclick="view()">테두리변경</button>
+  <button onclick="btn1()">배경변경 오렌지</button>
+  <button onclick="btn2()">배경변경 노랑</button>
+
+  <button onclick="btn(1)">배경변경 오렌지</button>
+  <button onclick="btn(2)">배경변경 노랑</button>
+
+  <button onclick="btn3('orange')">배경변경 오렌지</button>
+  <button onclick="btn3('yellow')">배경변경 노랑</button>
+</body>
+</html>
