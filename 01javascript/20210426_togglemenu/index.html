@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="../../css/reset.css">
   <script src="../../js/jquery-3.1.1.min.js"></script>
   <style>
-    .toggleMenu {width: 50px; height: 50px; border: 1px solid #000; position: relative; cursor:pointer}
+    .toggleMenu {width: 50px; height: 50px; border: 1px solid #000;
+                 position: absolute; right: 0; top: 0; display: none; cursor:pointer}
     .toggleMenu div {width: 34px; height: 5px; background: #000; border-radius:3px;
                      position: absolute; left: 50%; transform:translateX(-50%); transition:.3s}
     .bar1 {top: 11px;}
@@ -18,23 +19,74 @@
     .toggleMenu.change .bar1 {left: 50%; top: 50%; transform:translate(-50%, -50%) rotate(-45deg)}
     .toggleMenu.change .bar2 {opacity:0}
     .toggleMenu.change .bar3 {left: 50%; top: 50%; transform:translate(-50%, -50%) rotate(45deg)}
+
+    .menuWrap {width: 1200px; height: 50px; background: pink; margin: 0 auto; position: relative;}
+    .menuWrap h1 {background: skyblue; width: 100px; height: 50px; text-align: center;}
+    #myTopMenu {position: absolute; left: 100px; top: 0;}
+    #myTopMenu a {display: block; float: left; padding: 14px 10px;}
+    .content {width: 1200px; margin: 0 auto;}
+
+    @media screen and (max-width:575px){
+      body{background: green;}
+      .menuWrap {width: 100%;}
+      .toggleMenu {display: block;}
+      #myTopMenu {position: fixed; width: 100%; height: 100%; background: orange; left: 0; top:-100%;
+                  display:flex; justify-content: center; align-items: center; _transition:.3s}
+      .topNav {background:green; width: 50%;}
+      .topNav a {float:initial !important; text-align: center}
+      .content {width: 100%; padding: 20px 20px;}
+    }
+    @media screen and (min-width:576px) and (max-width:991px){
+      body {background: skyblue;}
+      .menuWrap {width: 100%;}
+      #myTopMenu {left:initial; right: 0;}
+      .content {width: 100%; padding: 20px 20px;}
+    }
+    @media screen and (min-width:992px){
+      .menuWrap {position: fixed; left: 50%; transform:translateX(-50%);}
+      .content {padding-top: 70px;}
+    }
   </style>
 </head>
 <body>
-  <div class="toggleMenu" onclick="toggle()">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
+  <div class="menuWrap">
+    <h1>logo</h1>
+    <div id="myTopMenu">
+      <nav class="topNav clearfix">
+        <a href="#">HOME</a>
+        <a href="#">NEWS</a>
+        <a href="#">CONTACT</a>
+        <a href="#">PRODUCT</a>
+      </nav>
+    </div>
+     <div class="toggleMenu"> <!-- onclick="toggle()" -->
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </div>
+  <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nesciunt, assumenda, nisi voluptatibus ratione quae nobis officiis, consectetur harum praesentium enim perspiciatis repellendus delectus obcaecati dolorem, consequuntur esse fugit voluptas quas veniam quasi facere. Ut eveniet minima nihil odio necessitatibus id placeat eaque sed deleniti, quidem et sint consequuntur vero delectus aut nesciunt rem, voluptate porro recusandae ad amet? Quam nihil incidunt ipsam voluptate, quis saepe eos molestias illo atque nesciunt quaerat quo veniam in ducimus tempore doloremque, deserunt facere iusto cupiditate corrupti! Aut, repellendus. Vel ratione quod eligendi libero, voluptatibus dolore possimus! Odio vero cum maxime nostrum voluptatibus suscipit itaque, aliquam eveniet sequi repudiandae enim commodi voluptas asperiores assumenda debitis possimus illo recusandae labore laboriosam, at numquam. Reiciendis accusamus tenetur, veritatis! Blanditiis porro soluta voluptate esse maxime explicabo natus incidunt dicta consectetur fuga eligendi sint delectus quaerat ducimus sapiente aut facere, quis aspernatur consequatur repudiandae vitae sunt, voluptatibus debitis. Minus qui quis, soluta quod tempore excepturi optio dolore sint similique minima, sequi atque, rerum numquam necessitatibus quaerat doloribus possimus iste voluptas odit consectetur. Quidem eos odit sequi voluptatum architecto cumque libero vitae quisquam cum laborum harum voluptates eveniet eius quam dolores perspiciatis ut suscipit, nobis. Odit numquam debitis quam possimus adipisci quibusdam doloremque rerum iure beatae reiciendis, quis quo sed molestiae quos sunt, labore aut consequuntur facilis ipsum, aliquid tempora dicta. Repellendus, possimus et. Perspiciatis, ipsum odit officia beatae. Modi fugiat voluptatum rem quia inventore, culpa porro necessitatibus tenetur neque, quis soluta aspernatur. Tempora nobis, quasi totam tenetur et officiis nulla, saepe vel ut numquam, adipisci animi, molestiae! Consectetur hic quam illo ab facere necessitatibus voluptate tempore repellendus. Unde nulla qui obcaecati aspernatur, placeat alias id dolorum laborum ipsa sequi dolore ullam laboriosam iure, facere sit consectetur minus nemo rerum voluptatibus incidunt aperiam non odit temporibus aliquam. Nemo officiis aut dolor illo, eius neque deserunt suscipit dicta iste possimus totam modi. Maiores quos reiciendis illum nemo. Eum maiores, magnam, quaerat facere laboriosam, animi, maxime perferendis voluptas perspiciatis quis fugiat omnis itaque tempora iure suscipit! Facere ut facilis nostrum fugiat doloribus, earum itaque corporis cupiditate! Sunt praesentium vitae, unde repellat. Sed voluptatem maiores dolorem quis tempore voluptatum magni perspiciatis quibusdam in veniam quod eligendi, vel. Temporibus, atque alias blanditiis deserunt nemo eveniet sit voluptas! Dolorum corrupti perspiciatis minus, ullam rem tempora voluptates vel vitae fugit nobis magnam sed, cum dolorem, laboriosam temporibus illum, quod non. Sit odio cum perferendis fugiat eos, iusto quas. Nostrum aliquid alias non consectetur. Optio eius sequi placeat, unde amet quibusdam nulla, aut similique eos eum vero ut itaque! Suscipit libero est, excepturi quis. Voluptatibus cupiditate tempore aspernatur esse repellendus minima earum ducimus, nobis quas accusantium animi hic, laudantium corrupti nemo, in dolorum corporis quam aut. Optio qui nobis id soluta, inventore impedit aperiam odio vel, commodi aliquam atque at minima in ab odit eaque expedita laudantium vitae nihil possimus error tempora, amet? Possimus culpa, eveniet voluptatem consequuntur iure soluta unde vero corporis aspernatur illo minima aliquam fugit libero delectus, qui recusandae! Architecto dolorum consequuntur unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio ut deleniti reprehenderit cum dolor rerum at voluptatem, amet neque cupiditate. Expedita, maxime? Et laudantium ex accusantium officiis ea autem a, asperiores delectus repellendus illum? Repellendus, omnis. Sint ipsa quae quasi vero, asperiores assumenda tempore rerum quo maxime non, voluptatum eaque. Dolorum dolorem doloribus impedit minima debitis dicta doloremque temporibus soluta, amet nulla voluptatum architecto earum ipsa beatae similique! Tenetur perferendis enim suscipit. Modi sunt, dolor vero molestiae ratione veritatis voluptates, neque pariatur incidunt! Placeat facere quos, quibusdam, minus quisquam et nostrum illum, quidem veniam amet obcaecati. Eum ab, rem veniam corrupti adipisci, delectus corporis earum! Et labore, aperiam ratione voluptatibus, rem totam soluta fugit magni quaerat qui provident minus ut esse alias sapiente similique architecto atque veritatis consectetur iusto! Consectetur officia, nisi impedit repellendus, at assumenda sunt soluta et culpa eaque fuga illum aut, perferendis eligendi ut magnam. Ipsa ipsam explicabo laudantium obcaecati, minus iste sunt modi distinctio ea sit voluptatibus laboriosam maiores dolores, ullam iusto rerum doloribus aliquam. Qui sed natus, deleniti fugiat tempore dolorem accusamus optio at, a, nulla reiciendis inventore officiis id explicabo et laborum architecto placeat cum ut quaerat maiores est. Totam libero nihil suscipit adipisci eos tempora nostrum qui facere esse, reprehenderit aliquam quidem illum. Eos, eum optio doloremque eveniet illum, beatae, sunt sequi iste modi eaque libero. Blanditiis maxime labore odio, ex. Laboriosam adipisci magnam fugit, ab minima sint. Beatae itaque, consequatur facilis, iure quia voluptatum dolore voluptas corporis ipsam rem blanditiis iusto consequuntur maiores ad. Ratione quis rem odit similique minima voluptatem voluptas et dignissimos temporibus quo perferendis dolorum nesciunt enim voluptatum a quaerat repellat libero quia atque quam earum tempora, dolores possimus neque. Impedit perspiciatis unde eius, labore et alias molestias error consequatur similique natus quae quaerat pariatur, quod modi a voluptatum recusandae optio nostrum facilis! Iure illum mollitia quisquam veniam, ipsa. Iusto voluptate alias pariatur, est enim odit officiis, doloremque maiores. Architecto nemo quisquam inventore dolor. Quasi accusantium adipisci earum dolor rem, sit modi asperiores at laboriosam debitis quo placeat, expedita natus ea dolore facere molestias, harum reiciendis voluptate exercitationem nostrum numquam. Natus, reiciendis cumque dignissimos? Unde sunt culpa nemo voluptate blanditiis hic, fugiat sint ipsum nobis incidunt in reprehenderit illo ab labore exercitationem consequatur totam praesentium molestias corporis, nisi ex sed maxime. Et hic officiis officia distinctio facere tempora minima cupiditate, est vitae, esse ut sed commodi perferendis non a debitis eveniet dignissimos aut eum recusandae impedit, fuga deleniti reprehenderit deserunt ad. Corrupti eligendi repellendus veritatis, rem sed similique amet? Voluptate perspiciatis cumque perferendis impedit iure excepturi repellat aliquam voluptas tenetur ratione ipsa, fugit architecto a illum accusantium minima error, facere! Veniam dolorum est minima quod. Totam numquam earum, repellat minima deserunt in sunt consectetur, corrupti minus rerum, dolore sint. Explicabo necessitatibus inventore cupiditate est possimus, laudantium animi similique rerum omnis placeat fuga distinctio, nulla eos repellendus ab! Numquam nemo in facere repudiandae iure voluptas. Numquam quae corporis nesciunt molestias delectus eos similique illo animi earum adipisci, beatae assumenda autem!
   </div>
   <script>
-    // $(".toggleMenu").click(function(){
-    //   const toggle = $(".toggleMenu").attr("class"); //get
-    //   if(toggle == "toggleMenu"){
-    //     $(".toggleMenu").addClass("change");
-    //   }else{
-    //     $(".toggleMenu").removeClass("change")
-    //   }
-    // });
+      $(".toggleMenu").click(function(){
+        const toggle = $(".toggleMenu").attr("class"); //get
+        if(toggle == "toggleMenu"){
+          $(".toggleMenu").addClass("change");
+          // $("#myTopMenu").css("left",0);
+          $("#myTopMenu").stop().animate({top:0});
+        }else{
+          $(".toggleMenu").removeClass("change")
+          // $("#myTopMenu").css("left","-100%");
+          $("#myTopMenu").stop().animate({top:"-100%"});
+        }
+      });
+
+      $(window).resize(function(){
+        $("#myTopMenu").removeAttr("style");
+        $(".toggleMenu").removeClass("change");
+      });
 
     // const toggle = document.querySelector(".toggleMenu");
     // toggle.addEventListener("click", function(){
@@ -46,25 +98,25 @@
     //   }
     // });
 
-    // const toggle = document.querySelector(".toggleMenu");
-    // toggle.onclick = function(){
-    //   let btn = toggle.getAttribute("class");
+     // const toggle = document.querySelector(".toggleMenu");
+     // toggle.onclick = function(){
+     //   let btn = toggle.getAttribute("class");
+     //   if(btn == "toggleMenu"){
+     //     toggle.classList.add("change")
+     //   }else{
+     //     toggle.classList.remove("change")
+     //   }
+     // }
+
+    // function toggle(){
+    //   const togglemenu = document.querySelector(".toggleMenu")
+    //   let btn = togglemenu.getAttribute("class");
     //   if(btn == "toggleMenu"){
-    //     toggle.classList.add("change")
+    //     togglemenu.classList.add("change")
     //   }else{
-    //     toggle.classList.remove("change")
+    //     togglemenu.classList.remove("change")
     //   }
     // }
-
-    function toggle(){
-      const togglemenu = document.querySelector(".toggleMenu")
-      let btn = togglemenu.getAttribute("class");
-      if(btn == "toggleMenu"){
-        togglemenu.classList.add("change")
-      }else{
-        togglemenu.classList.remove("change")
-      }
-    }
   </script>
 </body>
 </html>
