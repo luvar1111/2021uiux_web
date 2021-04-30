@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>time</title>
+</head>
+<body>
+  <p id="time"></p>
+  <button onclick="eTime()">멈추기</button>
+  <button onclick="sTime()">다시시작</button>
+  <script>
+    const time = document.getElementById("time"); // $("#time")
+
+    let myTime = 0;
+
+    function sTime(){
+      if(myTime == 0){
+        myTime = setInterval("timer()",1000);
+      }
+      console.log(myTime)
+    }
+
+    function timer(){
+      let date = new Date();
+      let timeView = date.toLocaleTimeString();
+      time.innerHTML = timeView;
+    }
+    timer();
+    sTime();
+
+    function eTime(){
+      clearInterval(myTime);
+      myTime = 0
+    }
+
+  </script>
+</body>
+</html>

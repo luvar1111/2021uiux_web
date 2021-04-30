@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>settimeout</title>
+</head>
+<body>
+  <button onclick="clearT()">stop</button>
+  <script>
+    function myAlert(time){
+      alert(time + "초 지났습니다.")
+    }
+    let timeId = setTimeout("myAlert(3)",3000);
+    function clearT(){
+      clearTimeout(timeId);
+    }
+
+    // document.getElementsByClassName("btn")[0].onclick = clearT;
+    // document.getElementsByClassName("btn")[0].onclick = function(){
+    //   clearTimeout(timeId);
+    // }
+  </script>
+</body>
+</html>
