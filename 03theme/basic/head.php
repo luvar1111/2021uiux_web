@@ -38,7 +38,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <div id="hd_wrapper">
 
         <div id="logo">
-            <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_IMG_URL ?>/logo.png" alt="<?php echo $config['cf_title']; ?>"></a>
+            <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_THEME_IMG_URL ?>/logo.png" alt="<?php echo $config['cf_title']; ?>"></a>
         </div>
 
 
@@ -61,7 +61,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <h2>메인메뉴</h2>
         <div class="gnb_wrap">
             <ul id="gnb_1dul">
-                <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+
                 <?php
 				$menu_datas = get_menu_db(0, true);
 				$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
@@ -169,10 +169,41 @@ if(defined('_INDEX_')) {?>
 <?}
  ?>
 
+ <? if(!defined('_INDEX-')){?>
+   <div class="subVisual">
+     <div class="subImg" id="page_title">
+       <div class="title">
+         <h2 class="loc1D"></h2>
+         <div class="txt">
+           안녕하세요
+         </div>
+       </div>
+     </div>
+   </div>
+   <script>
+     window.onload = function(){
+       const menuDep = $(".loc1D").html(); //get
+       console.log("현재위치" + menuDep);
+       if(menuDep == "회사소개"){
+         $(".txt").html("저희 홈페이지를 찾아주셔서 감사합니다.")
+       }
+       if(menuDep == "제품소개"){
+         $(".txt").html("제품소개입니다.")
+       }
+       if(menuDep == "커뮤니티"){
+         $(".txt").html("자유롭게 커뮤니티하실 수 있는 곳입니다.")
+       }
+     };
+   </script>
+   <?}?>
+
 
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
-    <div id="container_wr">
+    <div id="container_wr"> <!-- 1200px -->
 
-    <div id="container">
-        <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }
+
+    <div id="container" <? if(defined('_INDEX_')){?>style="width:1200px"<?}?> <!-- 930px -->
+        <?php if (!defined("_INDEX_")) { ?>
+            <div>H > <span class="loc1D"></span> > <?php echo get_text($g5['title']); ?>"></div>
+          <h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }
