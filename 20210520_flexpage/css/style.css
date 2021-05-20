@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing:border-box}
+a:link,a:visited {color: #000; text-decoration: none}
+li {list-style:none}
+.clearfix:after {content:""; display: block; clear: both;}
+
+/* header */
+header {display:flex; justify-content: center; height: 100px;}
+.container {width: 1000px; display:flex; justify-content: space-between;}
+.logo {display:flex; align-items: center}
+.menu {display:flex; align-items: center}
+.menu ul {display:flex}
+.menu ul a {display: block; padding: 15px;}
+.menu ul a:hover {background: orange; color: #fff;}
+.mobile_menu {display: none; width: 30px; height: 30px; cursor:pointer}
+
+/* banner */
+#banner {background-image: url(../images/banner/tony-stark-poster.jpg);
+         background-position: center; background-size:cover; height: 600px;
+         display:flex; justify-content: center;}
+.banner_txt {display:flex; flex-direction:column; flex:1;
+             justify-content:center; align-items: flex-end; color: #fff;}
+.banner_txt h2 {font-size: 2.5rem; width: 400px; text-align: left;}
+.banner_txt p {font-size: 1.3rem; width: 400px; text-align: left;}
+.column {flex-direction: column;}
+.banner_option {display:flex;}
+.banner_option > div {flex:1; background: #f00; color: #fff; padding: 15px;}
+.banner_title {font-weight: bold; font-size: 1.3rem; margin-bottom: 10px;}
+.banner_option a {color: #fff; font-size: 1.1rem;}
+.banner_option a:hover {border: 1px solid #fff;}
+
+/* general */
+#general {display:flex; justify-content: center;}
+#general section {flex:2; background: skyblue;}
+#general aside {flex:1; background: yellow;}
+
+@media screen and (max-width:700px){
+  header {height: 60px;}
+  .logo {padding-left: 16px;}
+  .logo img {width: 100px}
+  .menu {padding-right: 16px;}
+  .menu ul {display:none}
+  .mobile_menu {display: flex; flex-direction:column; justify-content: space-around;}
+  .mobile_menu_line {height: 4px; background: #000; border-radius:2px}
+  .banner_txt {align-items: center;}
+  .banner_option {flex-direction: column}
+  .banner_option > div {padding: 20px 20px 0 20px;}
+  .banner_option > div:last-child {padding-bottom: 20px;}
+  .banner_option a {display: none;}
+
+  #container {flex-direction:column;}
+}
