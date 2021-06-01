@@ -33,3 +33,15 @@
 
 .banner .row .card {box-shadow:10px 10px 20px rgba(46,61,73,0.3); border:0 none;
                     border-radius:10px !important; overflow: hidden;}
+
+.adven .adven-title {color:var(--primary-color);}
+.adven .icon {width: 80px; height: 80px; border-radius:50%; box-shadow:10px 10px 25px rgba(46,61,73,0.3)}
+.adven .title-1st {color:var(--primary-color);}
+.adven .title-2nd {color:var(--secondary-color);}
+.adven .title-3rd {color:var(--third-color);}
+.adven .img-view {height: 400px;}
+.adven .img-view img {position: absolute; box-shadow:10px 10px 25px rgba(46,61,73,0.3)}
+.adven .img-view .img-1st {max-width:400px; right: 1.25rem; top: 1.25rem;}
+.adven .img-view .img-2nd {max-width:300px; left: 1.25rem; bottom: 0;}
+
+.contact {background:url(../images/contact-cover.jpg) no-repeat center / cover;}
