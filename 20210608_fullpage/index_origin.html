@@ -16,19 +16,11 @@
         $(document).ready(function(){
             $("#fullpage").fullpage({
                 menu:".topMenu",
-                anchors:['m1st','m2st','m3st','m4st','m5st'],
+                anchors:['m1st','m2st','m3st','m4st'],
                 navigation:true,
-                navigationTooltips: ['home', 'product', 'community', 'board','footer'],
+                navigationTooltips: ['home', 'product', 'community', 'board'],
 		        showActiveTooltip: true,
                 responsiveWidth: 1000,
-                afterLoad:function(anchorslink,index){
-                    console.log(anchorslink+ ', ' + index);
-                    if(index == 1){
-                        $(".txt1st").addClass("end");
-                    }else{
-                        $(".txt1st").removeClass("end");
-                    }
-                }
             })
         })
     </script>
@@ -42,39 +34,32 @@
         .section.page2{background-image: url(images/bg2.jpg);}
         .section.page3{background-image: url(images/bg3.jpg);}
         .section.page4{background-image: url(images/bg4.jpg);}
-        #navTop{
+        /* #navTop{
             position: fixed;z-index:1;background: #fff;
-            width: 100%;
+            width: 100%; */
         }
         .navbar li{transition:0.3s;border-bottom: 5px solid transparent;}
         .navbar li.active{border-bottom: 5px solid #000;}
         #fp-nav.right{right:10px;}
         .fp-tooltip.right{right:20px}
 
-        .txt1st{opacity:0;transition:0.7s;transform:translateY(-300px)}
-        .txt1st.end{opacity:1;transform:translateY(0)}
-        .scroll{
-            position: absolute;bottom: 30px;left:50%;transform:translateX(-50%);
-            animation-name:xScroll;
-            animation-duration: 0.8s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            }
-
-        @keyframes xScroll {
-            from{bottom:30px;}
-            to{bottom: 50px;}
-        }
-
         @media screen and (max-width:1000px){
             .navbar li.active{border-bottom: 5px solid transparent;}
-            .txt1st{text-align: center;}
-
         }
     </style>
 </head>
 <body>
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-md-0">
+    <!-- <nav id="navTop">
+        <ul class="topMenu mb-0">
+            <li data-menuanchor="m1st"><a href="#m1st">menu1</a></li>
+            <li data-menuanchor="m2st"><a href="#m2st">menu2</a></li>
+            <li data-menuanchor="m3st"><a href="#m3st">menu3</a></li>
+            <li data-menuanchor="m4st"><a href="#m4st">menu4</a></li>
+        </ul>
+    </nav> -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-md-0">
         <a class="navbar-brand" href="#">LOGO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -99,23 +84,20 @@
       </nav>
     <div id="fullpage">
         <div class="section page1" data-anchor="m1st">
-            <div class="container">
-                <div class="txt1st">
-                    <h3>Lorem, ipsum.</h3>
-                    <p>Lorem ipsum dolor sit.</p>
-                    <a href="#" class="btn btn-primary">more</a>
+            <div class="container bg-info">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 text-center text-md-left">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, architecto.</div>
                 </div>
-            </div>
-            <div class="scroll">
-                <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
             </div>
         </div>
         <div class="section page2" data-anchor="m2st">2</div>
         <div class="section page3" data-anchor="m3st">3</div>
-        <div class="section page4" data-anchor="m4st">4</div>
-        <div class="section page5 fp-auto-height py-5 bg-dark text-white" data-anchor="m5st">
-            <div class="container text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, impedit?
+        <div class="section page4" data-anchor="m4st">
+            <div class="container bg-info">
+                <div class="slide" data-anchor="slide1"> Slide 1 </div>
+                <div class="slide" data-anchor="slide2"> Slide 2 </div>
+                <div class="slide" data-anchor="slide3"> Slide 3 </div>
+                <div class="slide" data-anchor="slide4"> Slide 4 </div>
             </div>
         </div>
     </div>
