@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+:root {
+  --primary-color:#02b3e4;
+  --secondary-color:#ff5483;
+  --third-color:#a951ed;
+  --font-1st:#333;
+  --font-2nd:#7d97ad
+}
+
+#headerWrap .bgcolor {
+  position: absolute; transform:skew(0deg,-15deg); top: -280px;
+  width: 100%; height: 600px; background:linear-gradient(160deg,#02ccba,#aa7ecd);
+}
+
+#headerWrap .video video {object-fit:fill; width: 100%; border-radius:5px;
+                          box-shadow:10px 10px 25px rgb(46,61,73)}
+
+.card-view li {border-radius:5px; box-shadow:10px 10px 25px rgb(46,61,73); overflow: hidden;}
+
+.slider .slider-title {font-size:1.1rem; color:var(--font-2nd);}
+.slider .row {position: relative;}
+
+
+.banner .row .mask {width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.banner .row .card-img {position: relative; overflow: hidden;}
+.banner .row > div:nth-child(1) .mask {background-color:rgba(2,179,228,0.6);}
+.banner .row > div:nth-child(2) .mask {background-color:rgba(2,240,186,0.5);}
+.banner .row > div:nth-child(3) .mask {background-color:rgba(169,81,237,0.5);}
+.banner .row > div:nth-child(4) .mask {background-color:rgba(2,179,228,0.6);}
+.banner .row > div:nth-child(5) .mask {background-color:rgba(2,240,186,0.5);}
+.banner .row > div:nth-child(6) .mask {background-color:rgba(169,81,237,0.5);}
+
+.banner .row .card {box-shadow:10px 10px 20px rgba(46,61,73,0.3); border:0 none;
+                    border-radius:10px !important; overflow: hidden;}
+
+.adven .adven-title {color:var(--primary-color);}
+.adven .icon {width: 80px; height: 80px; border-radius:50%; box-shadow:10px 10px 25px rgba(46,61,73,0.3)}
+.adven .title-1st {color:var(--primary-color);}
+.adven .title-2nd {color:var(--secondary-color);}
+.adven .title-3rd {color:var(--third-color);}
+.adven .img-view {height: 400px;}
+.adven .img-view img {position: absolute; box-shadow:10px 10px 25px rgba(46,61,73,0.3)}
+.adven .img-view .img-1st {max-width:400px; right: 1.25rem; top: 1.25rem;}
+.adven .img-view .img-2nd {max-width:300px; left: 1.25rem; bottom: 0;}
+
+.contact {background:url(../images/contentbg.jpg) no-repeat center / cover;}

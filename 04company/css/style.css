@@ -24,7 +24,6 @@
     border: 0 none;
     margin-bottom: 0;
 }
-.slider li img {width: 100%;}
 .sliderWrap li.slider1st,
 .sliderWrap li.slider2nd {background-repeat:no-repeat; background-position:center; background-size:cover;
                           height: 1000px;}
@@ -69,3 +68,4 @@
 .container .section li img {display: block; margin: 0 auto;}
 .container .section .card_body {text-align: center; padding: 20px 40px;}
 .container .section .card_body h3 {margin-bottom: 10px;}
+.container1 {height: 1000px;}
